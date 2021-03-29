@@ -4,8 +4,17 @@
 This will add python 3.6 virutal env to poetry virtual envs director. On macOs probably in /Users/<user>/Library/Caches/pypoetry/virtualenvs/
 
 # Publishing
+If inside venv
+```
+python3 -m pip install --upgrade setuptools wheel
+```
+if not inside venv
 ```
 python3 -m pip install --user --upgrade setuptools wheel
+```
+
+then
+```
 python3 setup.py sdist bdist_wheel
 python3 -m twine upload dist/*
 ```
